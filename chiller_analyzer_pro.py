@@ -7,16 +7,6 @@ import os
 from datetime import datetime
 from dotenv import load_dotenv
 
-# --- Load password from .env ---
-load_dotenv()
-PASSWORD = os.getenv("APP_PASSWORD")
-
-# --- Login ---
-st.sidebar.title("🔐 Login")
-user_input = st.sidebar.text_input("Enter password", type="password")
-if user_input != PASSWORD:
-    st.warning("🔒 Access Denied")
-    st.stop()
 
 # --- Page Setup ---
 st.set_page_config(page_title="Smart Chiller Plant Analyzer", layout="wide")
